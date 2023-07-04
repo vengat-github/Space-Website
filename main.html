@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Space</title>
+    <link rel="icon" href="/img/four.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <header>
+        <div class="header-div">
+            <div class="anything" style="margin-left: 3em;">Space Webpage</div>
+            <div class="header-op">
+                <div><a href="#home">Home</a></div>
+                <div><a href="#about">About</a></div>
+                <div><a href="#contact">Contact</a></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home">
+        <div class="home-div">
+            <h1 style="color: white; padding-bottom: 2rem;">Let's Explore The Universe</h1>
+            <div class="planets">
+                <div class="planet-div">
+                    <img id="sun" src="img/sun.png" alt="">
+                    <div id="planet-info-container">
+                        <div id="planet-name"></div>
+                        <div id="planet-info"></div>
+                    </div>
+                </div>
+                <div class="planet-div"><img id="mercury" src="img/mercury.png" alt=""></div>
+                <div class="planet-div"><img id="venus" src="img/venus.png" alt=""></div>
+                <div class="planet-div"><img id="earth" src="img/earth.png" alt=""></div>
+                <div class="planet-div"><img id="mars" src="img/mars.png" alt=""></div>
+                <div class="planet-div"><img id="jupiter" src="img/jupiter.png" alt=""></div>
+                <div class="planet-div"><img id="saturn" src="img/saturn.png" alt=""></div>
+                <div class="planet-div"><img id="uranus" src="img/uranas.png" alt=""></div>
+                <div class="planet-div"><img id="neptune" src="img/neptune.png" alt=""></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-main">
+            <h1>About Space</h1>
+            <div class="about-space">
+                <div>
+                    <p>Welcome to the enchanting realm of space!
+                        It's a vast expanse of cosmic wonders that extends beyond our planet.
+                        Brace yourself for a celestial journey as we explore the mysteries of the universe.
+                        Discover breathtaking galaxies, awe-inspiring nebulae, and distant star systems.
+                        From the scorching infernos of massive stars to the icy landscapes of distant planets,
+                        space holds an incredible variety of celestial landscapes. The secrets of the cosmos,
+                        marvel at the beauty of distant worlds, and embrace the vastness of space.</p>
+                </div>
+
+                <div>
+                    <p>Prepare for an adventure beyond imagination as we embark on a voyage through space!
+                        This is your gateway to the wonders of the universe.
+
+                        Delve into the triumphs of space exploration,
+                        from the iconic moon landing to groundbreaking discoveries.
+                        Learn about the planets in our solar system,
+                        each with its own unique characteristics and intriguing features.
+                        Encounter captivating phenomena like black holes and pulsars that challenge our understanding of the cosmos.
+                        As we navigate the cosmic tapestry, igniting curiosity and inspiring a sense of wonder about the vastness of space.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-div">
+            <h1>Contact Us</h1>
+            <div class="contact-divv">
+                <div class="acc-div">
+                    <img class="contact-img" src="https://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"
+                        alt="">
+                    <a href="https://twitter.com" target="_blank">venky</a>
+
+                </div>
+                <div class="acc-div">
+                    <img class="contact-img" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">
+                    <a href="https://github.com" target="_blank">venky</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Get references to the planet images
+        const sunImg = document.getElementById('sun');
+        const mercuryImg = document.getElementById('mercury');
+        const venusImg = document.getElementById('venus');
+        const earthImg = document.getElementById('earth');
+        const marsImg = document.getElementById('mars');
+        const jupiterImg = document.getElementById('jupiter');
+        const saturnImg = document.getElementById('saturn');
+        const uranusImg = document.getElementById('uranus');
+        const neptuneImg = document.getElementById('neptune');
+
+        // Create a function to handle the hover event
+        function handlePlanetHover(planetName, planetInfo) {
+            return function () {
+                const planetInfoDiv = document.getElementById('planet-info');
+                const planetNameDiv = document.getElementById('planet-name');
+                const planetInfoContainer = document.getElementById('planet-info-container');
+
+                // Update the planet name and info
+                planetNameDiv.innerHTML = planetName;
+                planetInfoDiv.innerHTML = planetInfo;
+
+                // Show the information container
+                planetInfoContainer.style.display = 'block';
+            };
+        }
+
+        // Create a function to hide the information container
+        function hidePlanetInfo() {
+            const planetInfoContainer = document.getElementById('planet-info-container');
+            planetInfoContainer.style.display = 'none';
+        }
+
+        // Attach the hover event listener to each planet image
+        sunImg.addEventListener('mouseenter', handlePlanetHover('Sun', 'The Sun is a star at the center of the solar system, providing light and heat to the planets. It is primarily composed of hydrogen and helium.'));
+        mercuryImg.addEventListener('mouseenter', handlePlanetHover('Mercury', 'Mercury is the closest planet to the Sun and the smallest planet in the solar system. It has a rocky surface and no atmosphere.'));
+        venusImg.addEventListener('mouseenter', handlePlanetHover('Venus', 'Venus is the second planet from the Sun and is known for its thick atmosphere and extreme temperatures. It is often called the "Morning Star" or the "Evening Star".'));
+        earthImg.addEventListener('mouseenter', handlePlanetHover('Earth', 'Earth is our home planet, the third planet from the Sun, and the only known celestial body to support life. It has a diverse range of ecosystems and a protective atmosphere.'));
+        marsImg.addEventListener('mouseenter', handlePlanetHover('Mars', 'Mars is the fourth planet from the Sun and is often called the "Red Planet" due to its reddish appearance. It has polar ice caps and evidence of liquid water in the past.'));
+        jupiterImg.addEventListener('mouseenter', handlePlanetHover('Jupiter', 'Jupiter is the largest planet in the solar system, known for its colorful clouds and the Great Red Spot. It is a gas giant with no solid surface.'));
+        saturnImg.addEventListener('mouseenter', handlePlanetHover('Saturn', 'Saturn is a gas giant with a prominent ring system consisting of ice particles, rocks, and dust. It has numerous moons, including Titan.'));
+        uranusImg.addEventListener('mouseenter', handlePlanetHover('Uranus', 'Uranus is a gas giant that rotates on its side, and it has a unique bluish-green color due to its atmosphere. It has a ring system and a set of tilted rings.'));
+        neptuneImg.addEventListener('mouseenter', handlePlanetHover('Neptune', 'Neptune is the eighth and farthest known planet from the Sun, characterized by its deep blue color and strong winds. It has a dynamic atmosphere and a system of rings.'));
+
+        // Hide the information container when the cursor moves away from the planet image
+        sunImg.addEventListener('mouseleave', hidePlanetInfo);
+        mercuryImg.addEventListener('mouseleave', hidePlanetInfo);
+        venusImg.addEventListener('mouseleave', hidePlanetInfo);
+        earthImg.addEventListener('mouseleave', hidePlanetInfo);
+        marsImg.addEventListener('mouseleave', hidePlanetInfo);
+        jupiterImg.addEventListener('mouseleave', hidePlanetInfo);
+        saturnImg.addEventListener('mouseleave', hidePlanetInfo);
+        uranusImg.addEventListener('mouseleave', hidePlanetInfo);
+        neptuneImg.addEventListener('mouseleave', hidePlanetInfo);
+    </script>
+
+</body>
+
+</html>
